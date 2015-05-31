@@ -1,7 +1,7 @@
 Start unit tests:
 
 #build
-cd path/to/the/project 
+cd path/to/the/project/nupack/Nupack
 javac -d bin -sourcepath src src/com/nulogy/nupack/test/NuPackTestSuite.java
 
 #Set classpath (the last jar is used by junit)
