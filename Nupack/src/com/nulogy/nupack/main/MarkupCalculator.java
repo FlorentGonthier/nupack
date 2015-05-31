@@ -6,7 +6,8 @@ import com.nulogy.nupack.main.bom.Project;
 import com.nulogy.nupack.main.formatter.MaterialFormatter;
 import com.nulogy.nupack.main.formatter.PriceFormatter;
 
-public class MarkupCalculator {
+public class MarkupCalculator 
+{
 	
 	Project _project;
 	
