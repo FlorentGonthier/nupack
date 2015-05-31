@@ -26,11 +26,30 @@ public class Project
 	
 	public Boolean validate()
 	{
+		if (_nbOfPeople < 0)
+		{
+			System.out.println("Number of people should be at least 0");
+			return false;
+		}
+		
+		if (null == _basePrice)
+		{
+			System.out.println("Base price is invalid");
+			return false;
+		}
+		
+		if (_basePrice.getAmount() < 0)
+		{
+			System.out.println("Base price should be at least 0");
+			return false;
+		}
+		
 		return true;
 	}
 	
 	public Price calculateProjectPrice() 
 	{
-		return null;
+		double anAmount = (_basePrice.getAmount() * (1+BASE_MARKUP)) * (1+ _nbOfPeople * PER_PERSON_MARKUP + _material.getMarkup());
+		return new Price(_basePrice.getCurrency(), anAmount);
 	}
 }
