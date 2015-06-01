@@ -1,6 +1,10 @@
 package com.nulogy.nupack.main.bom;
 
-
+// This class describes what a project needs to be executed:
+//	- People
+//	- Base Price
+//	- Type of material
+// and allows total price calculation based on these params
 public class Project 
 {
 	private static double BASE_MARKUP = .05;

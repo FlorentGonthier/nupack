@@ -1,5 +1,6 @@
 package com.nulogy.nupack.main.bom;
 
+// Class representing a price (amount + currency)
 public class Price 
 {
 	private String _currency;

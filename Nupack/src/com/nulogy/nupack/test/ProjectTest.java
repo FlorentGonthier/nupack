@@ -21,6 +21,8 @@ public class ProjectTest {
 	@Test
 	public void testSuccessFoodCategory() 
 	{
+		// Testing success with food category
+		System.out.println("ProjectTest: Testing success with food category");
 		Price aBasePrice = new Price(DOLLAR_CURRENCY, 1299.99);
 		
 		Project aProject = new Project(aBasePrice, 3, Material.FOOD);
@@ -33,6 +35,8 @@ public class ProjectTest {
 	@Test
 	public void testSuccessPharmaCategory() 
 	{
+		// Testing success with pharma category
+		System.out.println("ProjectTest: Testing success with pharma category");
 		Price aBasePrice = new Price(DOLLAR_CURRENCY, 5432.00);
 		Project aProject = new Project(aBasePrice, 1, Material.PHARMA);
 		
@@ -45,6 +49,8 @@ public class ProjectTest {
 	@Test
 	public void testSuccessOtherCategory() 
 	{
+		// Testing success with other category
+		System.out.println("ProjectTest: Testing success with other category");
 		Price aBasePrice = new Price(DOLLAR_CURRENCY, 12456.95);	
 		Project aProject = new Project(aBasePrice, 4, Material.OTHER);
 		
@@ -57,6 +63,8 @@ public class ProjectTest {
 	@Test
 	public void testSuccessFreeProject() 
 	{
+		// Testing success with $0 project
+		System.out.println("ProjectTest: Testing success with $0 project");
 		Price aBasePrice = new Price(DOLLAR_CURRENCY, 0);	
 		Project aProject = new Project(aBasePrice, 4, Material.OTHER);
 		
@@ -69,6 +77,8 @@ public class ProjectTest {
 	@Test
 	public void testNbOfPeopleValidationFailure() 
 	{
+		// Testing success with invalid number of people
+		System.out.println("ProjectTest: Testing failure with invalid number of people");
 		Price aBasePrice = new Price(DOLLAR_CURRENCY, 12456.95);
 		Project aProject = new Project(aBasePrice, -1, Material.OTHER);
 		
@@ -78,6 +88,8 @@ public class ProjectTest {
 	@Test
 	public void testBasePriceValidationFailure() 
 	{
+		// Testing success with invalid base price
+		System.out.println("ProjectTest: Testing failure with invalid base price");
 		Price aBasePrice = new Price(DOLLAR_CURRENCY, -3);
 		Project aProject = new Project(aBasePrice, 1, Material.OTHER);
 		

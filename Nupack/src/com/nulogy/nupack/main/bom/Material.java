@@ -1,5 +1,7 @@
 package com.nulogy.nupack.main.bom;
 
+// Enum describing the different types of materials supported
+// Along with their markup rates
 public enum Material 
 {
     PHARMA(.075),

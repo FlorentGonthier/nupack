@@ -1,12 +1,13 @@
 Start unit tests:
 
-#build
+# Set classpath
+# You may need to add the path to the hamcrest jar if you are using jUnit > 4.9
+export CLASSPATH=/path/to/junit.jar:./bin
+
+# Build (code was built with java7)
 cd path/to/the/project/nupack/Nupack
 mkdir bin
 javac -d bin -sourcepath src src/com/nulogy/nupack/test/NuPackTestSuite.java
-
-#Set classpath (the last jar is used by junit)
-export CLASSPATH=/path/to/junit.jar:./bin:/path/to/org.hamcrest.core_1.3.0.v201303031735.jar
 
 #run the tests
 java org.junit.runner.JUnitCore com.nulogy.nupack.test.NuPackTestSuite
@@ -22,3 +23,5 @@ input parameters: iName
 class attributes: _attribute
 local variables: aLocalVar
 static variables: STATIC_VARIABLE
+-------------------------------------
+

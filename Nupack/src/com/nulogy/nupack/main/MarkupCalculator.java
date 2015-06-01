@@ -6,10 +6,13 @@ import com.nulogy.nupack.main.bom.Project;
 import com.nulogy.nupack.main.formatter.MaterialFormatter;
 import com.nulogy.nupack.main.formatter.PriceFormatter;
 
+// Project entry point:
+// Only one method available to return the calculated price of a project
+// Based on user provided parameters
 public class MarkupCalculator 
 {
 	
-	Project _project;
+	private Project _project;
 	
 	// Construct the calculator with user input
 	public MarkupCalculator(String iPrice, int iNbOfPeople, String iTypeOfMaterial)

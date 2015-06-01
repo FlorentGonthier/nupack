@@ -16,6 +16,7 @@ public class PriceFormatterTest
 	public void testSuccessWithCurrency() 
 	{
 		// Validate price parsing for standard input
+		System.out.println("PriceFormatterTest: Testing success with currency");
 		Price aPrice = PriceFormatter.ToPrice("$123.345");
 		assertNotNull(aPrice);
 		assertEquals("$", aPrice.getCurrency());
@@ -26,6 +27,7 @@ public class PriceFormatterTest
 	public void testSuccessWithCurrencyAndNegVal() 
 	{
 		// Validate price parsing for standard negative input
+		System.out.println("PriceFormatterTest: Testing success with currency and negative value");
 		Price aPrice = PriceFormatter.ToPrice("$-123.345");
 		assertNotNull(aPrice);
 		assertEquals("$", aPrice.getCurrency());
@@ -36,6 +38,7 @@ public class PriceFormatterTest
 	public void testSuccessWithoutCurrency() 
 	{
 		// Validate price parsing for standard input with no currency information
+		System.out.println("PriceFormatterTest: Testing success without currency");
 		Price aPrice = PriceFormatter.ToPrice("123.345");
 		assertNotNull(aPrice);
 		assertEquals("", aPrice.getCurrency());
@@ -46,6 +49,7 @@ public class PriceFormatterTest
 	public void testFailureInvalidNumberWithCurrency() 
 	{
 		// Validate price parsing for invalid price value
+		System.out.println("PriceFormatterTest: Testing failure with invalid price");
 		Price aPrice = PriceFormatter.ToPrice("$abc");
 		assertEquals(null, aPrice);
 	}
@@ -54,6 +58,7 @@ public class PriceFormatterTest
 	public void testFailureInvalidNumberWithoutCurrency() 
 	{
 		// Validate price parsing for invalid price value
+		System.out.println("PriceFormatterTest: Testing failure with invalid price and without currency");
 		Price aPrice = PriceFormatter.ToPrice("abc");
 		assertEquals(null, aPrice);
 	}
