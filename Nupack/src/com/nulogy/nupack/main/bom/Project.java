@@ -64,6 +64,31 @@ public class Project
 		return true;
 	}
 	
+	private double getBaseAmount()
+	{
+		return _basePrice.getAmount();
+	}
+	
+	private double applyBaseMarkup(double iBaseAmount)
+	{
+		return iBaseAmount * (1 + BASE_MARKUP);
+	}
+	
+	private double getWorkerMarkup()
+	{
+		return _nbOfPeople * PER_PERSON_MARKUP;
+	}
+	
+	private double getMaterialMarkup()
+	{
+		return _material.getMarkup();
+	}
+	
+	private double applyOtherMarkups(double iBaseAmount)
+	{
+		double aTotalOtherMarkup = getMaterialMarkup() + getWorkerMarkup();
+		return iBaseAmount * (1 + aTotalOtherMarkup );
+	}
 	
 	/**
 	 * Returns The computed price of a project: 
@@ -75,8 +100,10 @@ public class Project
 	 */
 	public Price calculateProjectPrice() 
 	{
-		double anAmount = (_basePrice.getAmount() * (1 + BASE_MARKUP) )
-									* (1 + _nbOfPeople * PER_PERSON_MARKUP + _material.getMarkup());
+		double anAmount = getBaseAmount();
+		anAmount = applyBaseMarkup(anAmount);
+		anAmount = applyOtherMarkups(anAmount);
+		
 		return new Price(_basePrice.getCurrency(), anAmount);
 	}
 }

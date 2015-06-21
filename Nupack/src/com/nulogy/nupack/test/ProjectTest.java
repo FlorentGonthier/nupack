@@ -75,7 +75,7 @@ public class ProjectTest {
 	}
 	
 	@Test
-	public void testNbOfPeopleValidationFailure() 
+	public void testNumberOfPeopleValidationFailure() 
 	{
 		// Testing success with invalid number of people
 		System.out.println("ProjectTest: Testing failure with invalid number of people");

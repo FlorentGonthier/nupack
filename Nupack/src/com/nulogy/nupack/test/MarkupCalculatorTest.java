@@ -36,7 +36,7 @@ public class MarkupCalculatorTest {
 	}
 	
 	@Test
-	public void testFailureInvalidNbOfPeople() 
+	public void testFailureInvalidNumberOfPeople() 
 	{
 		// Testing failure with invalid number of people
 		System.out.println("MarkupCalculatorTest: Testing failure with invalid number of people");
